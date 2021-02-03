@@ -49,8 +49,9 @@ while (1) {
                 case "*":
                   res = +a * +b;
                   break;
-                default:
-                  res = "Нет таких действий!";
+                // не имеет смысла?
+                // default:
+                //   res = "Нет таких действий!";
               }
               alert(res);
             } else {
