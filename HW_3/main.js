@@ -4,7 +4,7 @@ let b;
 let res;
 // функции
 function isNumber(v) {
-  return !isNaN(+v) && isFinite(+v) && typeof +v == "number";
+  return !isNaN(+v) && isFinite(+v) && typeof +v == "number" && v !== '';
 }
 function NotCanceled(v) {
   return v !== null;
@@ -40,6 +40,7 @@ if (NotCanceled(a)) {
     // проверка знака
     operator = prompt("Введите один знак(+ - / *)");
     if (NotCanceled(operator)) {
+      if (isOperator(operator)){
 
         // проверка второго числа
         b = prompt("Введите второе число.");
@@ -56,7 +57,10 @@ if (NotCanceled(a)) {
         } else {
           alert("Вы отменили запрос!");
         }
-        
+
+      }else {
+        alert("Вы неверно ввели знак!");
+      }
     } else {
       alert("Вы отменили запрос!");
     }
